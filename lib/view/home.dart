@@ -24,8 +24,8 @@ class _MyAppState extends State<MyApp> {
         child: Scaffold(
       backgroundColor: Colors.black,
       body: FutureBuilder(
-          future:
-              Provider.of<homeProvider>(context, listen: false).cApiCalling("${Provider.of<homeProvider>(context,listen: true).country}"),
+          future: Provider.of<homeProvider>(context, listen: false).cApiCalling(
+              "${Provider.of<homeProvider>(context, listen: true).country}"),
           builder: (context, snapshot) {
             if (snapshot.hasError) {
               return Text("${snapshot.error}");
@@ -96,16 +96,19 @@ class _MyAppState extends State<MyApp> {
                                         style:
                                             TextStyle(color: Colors.deepOrange),
                                       ),
-                                      Align(alignment: Alignment.centerLeft,
+                                      Align(
+                                        alignment: Alignment.centerLeft,
                                         child: LikeButton(
                                           // size: buttonSize,
-                                          circleColor:
-                                          CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                                          circleColor: CircleColor(
+                                              start: Color(0xff00ddff),
+                                              end: Color(0xff0099cc)),
                                           bubblesColor: BubblesColor(
                                             dotPrimaryColor: Color(0xff33b5e5),
-                                            dotSecondaryColor: Color(0xff0099cc),
+                                            dotSecondaryColor:
+                                                Color(0xff0099cc),
                                           ),
-                                          likeCount: 665,
+                                          likeCount: 1,
                                         ),
                                       )
                                     ],

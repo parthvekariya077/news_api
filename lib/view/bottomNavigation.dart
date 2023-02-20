@@ -13,15 +13,23 @@ class bottom extends StatefulWidget {
 class _bottomState extends State<bottom> {
   List<Widget> Screen = [
     tabbar(),
-    Center(child: Text("video screen",style: TextStyle(color: Colors.white,fontSize: 20),)),
-    Center(child: Text("setting screen",style: TextStyle(color: Colors.white,fontSize: 20),))
+    Center(
+        child: Text(
+      "video screen",
+      style: TextStyle(color: Colors.white, fontSize: 20),
+    )),
+    Center(
+        child: Text(
+      "setting screen",
+      style: TextStyle(color: Colors.white, fontSize: 20),
+    ))
   ];
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          backgroundColor: Colors.black,
+      backgroundColor: Colors.black,
       body: Screen[Provider.of<homeProvider>(context, listen: true).index],
       bottomNavigationBar: BottomNavigationBar(
           onTap: (int cindex) {

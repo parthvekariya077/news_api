@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:like_button/like_button.dart';
-import 'package:news_api/view/detailsScreen.dart';
 import 'package:news_api/view/home.dart';
-import 'package:news_api/view/india.dart';
 
 class tabbar extends StatefulWidget {
   const tabbar({Key? key}) : super(key: key);
