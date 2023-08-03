@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:like_button/like_button.dart';
 import 'package:news_api/model/Countryapi.dart';
 import 'package:news_api/provider/homeProvider.dart';
 import 'package:provider/provider.dart';
@@ -36,8 +35,8 @@ class _MyAppState extends State<MyApp> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(12),
+                      const Padding(
+                        padding: EdgeInsets.all(12),
                         child: Text(
                           "Country name",
                           style: TextStyle(color: Colors.white, fontSize: 20),
@@ -51,7 +50,7 @@ class _MyAppState extends State<MyApp> {
                             },
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.orange),
-                            child: Text("Show")),
+                            child: const Text("Show")),
                       )
                     ],
                   ),
@@ -72,7 +71,7 @@ class _MyAppState extends State<MyApp> {
                                       Text(
                                         "${countryapi.articles![index].title}",
                                         overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             color: Colors.red, fontSize: 30),
                                       ),
                                       CachedNetworkImage(
@@ -81,36 +80,24 @@ class _MyAppState extends State<MyApp> {
                                         fit: BoxFit.fill,
                                         imageUrl:
                                             "${countryapi.articles![index].urlToImage}",
-                                        placeholder: (context, _) => Center(
-                                            child: Text("ERROR LOADING!")),
-                                        errorWidget: (context, _, __) => Center(
-                                            child: Text("ERROR LOADING!")),
+                                        placeholder: (context, _) =>
+                                            const Center(
+                                                child: Text("ERROR LOADING!")),
+                                        errorWidget: (context, _, __) =>
+                                            const Center(
+                                                child: Text("ERROR LOADING!")),
                                       ),
                                       Text(
                                         "${countryapi.articles![index].description}",
-                                        style: TextStyle(color: Colors.teal),
+                                        style:
+                                            const TextStyle(color: Colors.teal),
                                       ),
                                       Text(
                                         "${countryapi.articles![index].content}",
                                         overflow: TextOverflow.ellipsis,
-                                        style:
-                                            TextStyle(color: Colors.deepOrange),
+                                        style: const TextStyle(
+                                            color: Colors.deepOrange),
                                       ),
-                                      Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: LikeButton(
-                                          // size: buttonSize,
-                                          circleColor: CircleColor(
-                                              start: Color(0xff00ddff),
-                                              end: Color(0xff0099cc)),
-                                          bubblesColor: BubblesColor(
-                                            dotPrimaryColor: Color(0xff33b5e5),
-                                            dotSecondaryColor:
-                                                Color(0xff0099cc),
-                                          ),
-                                          likeCount: 1,
-                                        ),
-                                      )
                                     ],
                                   ),
                                 ),
@@ -122,7 +109,7 @@ class _MyAppState extends State<MyApp> {
                 ],
               );
             }
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }),
     ));
   }

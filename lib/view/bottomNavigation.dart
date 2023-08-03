@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:news_api/provider/homeProvider.dart';
 import 'package:news_api/view/tabbar.dart';
@@ -12,13 +14,13 @@ class bottom extends StatefulWidget {
 
 class _bottomState extends State<bottom> {
   List<Widget> Screen = [
-    tabbar(),
-    Center(
+    const tabbar(),
+    const Center(
         child: Text(
       "video screen",
       style: TextStyle(color: Colors.white, fontSize: 20),
     )),
-    Center(
+    const Center(
         child: Text(
       "setting screen",
       style: TextStyle(color: Colors.white, fontSize: 20),
@@ -40,7 +42,7 @@ class _bottomState extends State<bottom> {
           backgroundColor: Colors.black,
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.grey,
-          items: [
+          items: const [
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,

@@ -18,23 +18,23 @@ class _tabbarState extends State<tabbar> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
-          title: Text("Daily24/7 News"),
+          title: const Text("Daily24/7 News"),
           actions: [
             PopupMenuButton(itemBuilder: (context) {
               return [
-                PopupMenuItem(child: Text("Setting")),
-                PopupMenuItem(child: Text("Add Profile")),
+                const PopupMenuItem(child: Text("Setting")),
+                const PopupMenuItem(child: Text("Add Profile")),
               ];
             }),
           ],
-          bottom: TabBar(
+          bottom: const TabBar(
             indicatorSize: TabBarIndicatorSize.label,
             isScrollable: true,
             tabs: [
               Tab(text: "TOP NEWS"),
               Tab(text: "HEALTH"),
-              Tab(text: "BISSNESS"),
-              Tab(text: "ENTERTAIMENTS"),
+              Tab(text: "BUSINESS"),
+              Tab(text: "ENTERTAINMENTS"),
               Tab(text: "SCIENCE"),
               Tab(text: "SPORTS"),
               Tab(text: "TECHNOLOGY"),
@@ -42,7 +42,7 @@ class _tabbarState extends State<tabbar> {
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             MyApp(),
             MyApp(),
