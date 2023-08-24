@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -9,7 +11,7 @@ class homeProvider extends ChangeNotifier {
 
   int index = 0;
 
-  void currentindex(int i) {
+  void currentIndex(int i) {
     index = i;
     notifyListeners();
   }
@@ -20,10 +22,10 @@ class homeProvider extends ChangeNotifier {
   }
 
   Future<Countryapi> cApiCalling(String data) async {
-    String countryapi =
+    String countryApi =
         "https://newsapi.org/v2/top-headlines?country=$data&category=business&apiKey=a1cf1d9413f8435a98e9cca38397ae2f";
 
-    var jsonString = await http.get(Uri.parse(countryapi));
+    var jsonString = await http.get(Uri.parse(countryApi));
     var json = jsonDecode(jsonString.body);
 
     return Countryapi.fromJson(json);

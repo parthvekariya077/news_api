@@ -34,9 +34,9 @@ class _bottomState extends State<bottom> {
       backgroundColor: Colors.black,
       body: Screen[Provider.of<homeProvider>(context, listen: true).index],
       bottomNavigationBar: BottomNavigationBar(
-          onTap: (int cindex) {
+          onTap: (int cIndex) {
             Provider.of<homeProvider>(context, listen: false)
-                .currentindex(cindex);
+                .currentIndex(cIndex);
           },
           currentIndex: Provider.of<homeProvider>(context).index,
           backgroundColor: Colors.black,
